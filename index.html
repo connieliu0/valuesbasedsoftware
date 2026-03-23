@@ -5,362 +5,423 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 <body>
-  <div class="hero-image-wrap">
-    <img src="zine.png" alt="Values based software talks"/>
+
+  <!-- 4-column header -->
+  <div class="header-row">
+    <div class="header-col header-col-title">values based<br>software</div>
+    <div class="header-col">quarterly<br>gathering around</div>
+    <div class="header-col">how does software reflect<br>what you believe in?</div>
+    <div class="header-col">interested in presenting at a<br>future talk? fill out the form <a href="https://docs.google.com/forms/d/1zxElPoZUjpNbCFjfoPRLD-ed-nTsFW5sZLUin6tzEt4/preview">here</a></div>
   </div>
-<br/>
-    <h3>values based software talks</h3>
-<a href="https://luma.com/59dage9v" target="_blank">original event link</a>
 
-<div class="row">
-<div class="col">
-</div>
-<div class="col">
-    <table class="tg"><thead>
-      <tr>
-        <th class="tg-0lax col-recording" rowspan="8"><span class="recording-header-text">Recording</span></th>
-        <th class="tg-0lax">Name</th>
-        <th class="tg-0lax">Topic</th>
-        <th class="tg-0lax">Content</th>
-        <th class="tg-0lax">Timestamp</th>
-      </tr></thead>
-    <tbody>
-      
-      <tr data-hover-image="connie.jpeg">
-        <td class="tg-0lax col-recording" id="recording-cell" rowspan="7">
-          <div class="mobile-recording mobile-recording-main"><img src="connie.jpeg" alt=""></div>
-          <span class="recording-label">
-            watch the <a href="https://drive.google.com/file/d/1lg1YxHMtvJgkL7CfgEaPV6uf3jboiVsA/view?usp=drive_link" target="_blank">recording here</a>! 
-          </br><em style="color: gray;">note: the mic was accidentally off so 
-          </br>the video is silent until 54:20</em>
-          </span>
-          <div id="hover-preview" class="hover-preview"></div>
-        </td>
-        <td class="tg-0lax row-first-cell"><a href="https://connie.surf" target="_blank">Connie Liu</a></td>
-        <td class="tg-0lax"><a href="https://linkdump.connie.surf" target="_blank">linkdump</a> / <a href="https://inprogress.works" target="_blank">inprogress.works</a></td>
-        <td class="tg-0lax"><a href="https://www.figma.com/proto/LNSlYiytwIaJvcR0sy54HA?page-id=0%3A1&node-id=1-6&t=CvoZwvI5Vwzk9dsX-0&scaling=min-zoom&content-scaling=fixed" target="_blank">slides</a></td>
-        <td class="tg-0lax"></td>
-      </tr>
-      <tr data-hover-image="justin.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="justin.jpeg" alt=""></div><a href="https://justinliang.me" target="_blank">Justin Liang</a></td>
-        <td class="tg-0lax"><a href="https://www.are.na/justin-liang/justin-browser" target="_blank">justin browser</a></td>
-        <td class="tg-0lax"><a href="https://www.are.na/justin-liang/justin-browser-talk" target="_blank">are.na channel</a></td>
-        <td class="tg-0lax"></td>
+  <!-- Main 3-column layout -->
+  <div class="main-row">
 
-      </tr>
-      <tr data-hover-image="max.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="max.jpeg" alt=""></div><a href="https://maxbo.me" target="_blank">Max Bo</a></td>
-        <td class="tg-0lax"><a href="https://poppenhu.is" target="_blank">poppenhu.is</a></td>
-        <td class="tg-0lax"><a href="https://www.are.na/max-bo/poppenhu-is-demo-channel" target="_blank">are.na channel</a></td>
-        <td class="tg-0lax"></td>
+    <!-- Left: Video/Recording -->
+    <div class="col-video">
+      <p><a href="https://luma.com/59dage9v" target="_blank">Talk #1</a></p>
+     <p><em>Browsers, small social networks, traversing through personal journals and data</em></p>
+      <p>January 30, 2026 - Ambrook</p>
+      <div class="video-block" id="video-block">
+        <div id="yt-player"></div>
+        <div class="hover-overlay" id="hover-overlay">
+          <img id="hover-overlay-img" src="" alt="" />
+        </div>
+      </div>
+      <div class="recording-label">
+        <em style="color: gray;">note: the mic was accidentally off so the video is silent until 54:20</em>
+      </div>
+    </div>
 
-      </tr>
-      <tr data-hover-image="nick.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="nick.jpeg" alt=""></div><a href="https://nicholaschen.io" target="_blank">Nick Chen</a></td>
-        <td class="tg-0lax"><a href="https://synesthesia.club" target="_blank">synesthesia.club</a></td>
-        <td class="tg-0lax"><a href="https://docs.google.com/presentation/d/1CTVpP_upV5qEl5cq_jAREek0qFpHCv1RaN-Me1NhzaA/edit" target="_blank">slides</a></td>
-        <td class="tg-0lax"></td>
+    <!-- Middle: Table -->
+    <div class="col-table">
+      <table class="tg">
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Content</th>
+            <th>Name</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-hover-image="connie.jpeg">
+            <td><a href="https://linkdump.connie.surf" target="_blank">linkdump</a> / <a href="https://inprogress.works" target="_blank">inprogress.works</a></td>
+            <td><a href="https://www.figma.com/proto/LNSlYiytwIaJvcR0sy54HA?page-id=0%3A1&node-id=1-6&t=CvoZwvI5Vwzk9dsX-0&scaling=min-zoom&content-scaling=fixed" target="_blank">slides</a></td>
+            <td class="row-first-cell"><a href="https://connie.surf" target="_blank">Connie Liu</a></td>
+            <td><a href="#" class="timestamp-link" data-seconds="109">1:49</a></td>
+          </tr>
+          <tr data-hover-image="justin.jpeg">
+            <td><a href="https://www.are.na/justin-liang/justin-browser" target="_blank">justin browser</a></td>
+            <td><a href="https://www.are.na/justin-liang/justin-browser-talk" target="_blank">are.na channel</a></td>
+            <td class="row-first-cell"><a href="https://justinliang.me" target="_blank">Justin Liang</a></td>
+            <td><a href="#" class="timestamp-link" data-seconds="794">13:14</a></td>
 
-      </tr>
-      <tr data-hover-image="ling.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="ling.jpeg" alt=""></div><a href="https://x.com/fishlooker_" target="_blank">Ling Lu</a></td>
-        <td class="tg-0lax"><a href="https://linglu66.github.io/froggyos" target="_blank">Froggy OS</a></td>
-        <td class="tg-0lax"><a href="https://www.figma.com/deck/hnZP8lrbqirzBWlzbxNVzl/Froggy-OS?node-id=9-478&t=kfjG3S2e6mP7OpBB-1">slides</a></td>
-        <td class="tg-0lax"></td>
+          </tr>
+          <tr data-hover-image="max.jpeg">
+            <td><a href="https://poppenhu.is" target="_blank">poppenhu.is</a></td>
+            <td><a href="https://www.are.na/max-bo/poppenhu-is-demo-channel" target="_blank">are.na channel</a></td>
+            <td class="row-first-cell"><a href="https://maxbo.me" target="_blank">Max Bo</a></td>
+            <td><a href="#" class="timestamp-link" data-seconds="1590">26:50</a></td>
 
-      </tr>
-      <tr data-hover-image="ashley.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="ashley.jpeg" alt=""></div>Ashley </td>
-        <td class="tg-0lax"><a href="https://commonplace.day" target="_blank">commonplace.day</a></td>
-        <td class="tg-0lax"></td>
-        <td class="tg-0lax"></td>
+          </tr>
+          <tr data-hover-image="nick.jpeg">
+            <td><a href="https://synesthesia.club" target="_blank">synesthesia.club</a></td>
+            <td><a href="https://docs.google.com/presentation/d/1CTVpP_upV5qEl5cq_jAREek0qFpHCv1RaN-Me1NhzaA/edit" target="_blank">slides</a></td>
+            <td class="row-first-cell"><a href="https://nicholaschen.io" target="_blank">Nick Chen</a></td>
+            <td></td>
+          </tr>
+          <tr data-hover-image="ling.jpeg">
+            <td><a href="https://linglu66.github.io/froggyos" target="_blank">Froggy OS</a></td>
+            <td><a href="https://www.figma.com/deck/hnZP8lrbqirzBWlzbxNVzl/Froggy-OS?node-id=9-478&t=kfjG3S2e6mP7OpBB-1">slides</a></td>
+            <td class="row-first-cell"><a href="https://x.com/fishlooker_" target="_blank">Ling Lu</a></td>
+            <td></td>
+          </tr>
+          <tr data-hover-image="ashley.jpeg">
+            <td><a href="https://commonplace.day" target="_blank">commonplace.day</a></td>
+            <td></td>
+            <td class="row-first-cell">Ashley</td>
+            <td></td>
+          </tr>
+          <tr data-hover-image="josh.jpeg">
+            <td><a href="https://enzyme.garden" target="_blank">enzyme.garden</a></td>
+            <td><a href="https://docs.google.com/presentation/d/1k-8uYVLz6amMtOVsdY8V8F6asH2Pt-fqJ0XerPYAGIw/mobilepresent?slide=id.p1">slides</a>, <a href="https://pollen.jpham.space/" target="_blank">blog</a></td>
+            <td class="row-first-cell"><a href="https://www.jpham.space/" target="_blank">Josh Pham</a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <img src="zine.png" alt="zine" width="100%" class="zoomable" />
+    </div>
 
-      </tr>
-      <tr data-hover-image="josh.jpeg">
-        <td class="tg-0lax row-first-cell"><div class="mobile-recording"><img src="josh.jpeg" alt=""></div><a href="https://www.jpham.space/" target="_blank">Josh Pham</a></td>
-        <td class="tg-0lax"><a href="https://enzyme.garden" target="_blank">enzyme.garden</a></td>
-        <td class="tg-0lax"><a href="https://docs.google.com/presentation/d/1k-8uYVLz6amMtOVsdY8V8F6asH2Pt-fqJ0XerPYAGIw/mobilepresent?slide=id.p1">slides</a>, <a href="https://pollen.jpham.space/" target="_blank">blog</a></td>
-        <td class="tg-0lax"></td>
+    <!-- Right: Artifacts -->
+    <div class="col-artifacts">
+      <img src="general2.jpeg" alt="event photo" />
+      <img src="general.jpeg" alt="event photo" />
+    </div>
 
-      </tr>
-        </tbody></table>
-</div>
+  </div>
 
-</div>
-<p>contact <a href="mailto:cliu55567@gmail.com">connie</a> for any questions</p>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
 
 </body>
 <style>
-    * {
-        box-sizing: border-box;
-    }
-    body{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      padding: 0 16px;
-        font-family: Arial, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: rgb(43, 68, 104);
-    }
-    h3{
-        font-weight: 400;
-    }
-    p{
-        margin-top: 0;
-    }
-    .col{
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
+  @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&display=swap');
 
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0 24px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(43, 68, 104);
+    overflow-x: hidden;
+  }
 
-    }
-    .row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: top;
-        gap: 24px;
-    }
-    .materials{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    h3{
-        margin-top: 0;
-    }
-    table{
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 100%;
-    }
-    .hero-image-wrap {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
-    .hero-image-wrap img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-    .recording-label {
-        display: block;
-        overflow-wrap: break-word;
-    }
-    img {
-    max-width: 100%;
+  /* ── Header row ── */
+  .header-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    padding: 20px 0 12px;
+    border-bottom: 1px dashed lightblue;
+  }
+  .header-col {
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgb(43, 68, 104);
+  }
+  .header-col:first-child {
+    padding-left: 0;
+  }
+  .header-col-title {
+    font-family: 'Bitcount Prop Double', monospace;
+  }
+
+  /* ── Main 3-column layout ── */
+  .main-row {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    gap: 0;
+    align-items: start;
+  }
+
+  /* Left: video */
+  .col-video {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px 16px 0;
+    gap: 10px;
+    /* border-right: 1px dashed lightblue; */
+  }
+  .video-block {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  .hover-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+  }
+  .hover-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hover-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .recording-label {
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+  .col-video p {
+    margin: 8px 0 0;
+    font-size: 13px;
+  }
+
+  /* Middle: table */
+  .col-table {
+    padding: 16px 12px;
+  }
+  table.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  table.tg th, table.tg td {
+    border: 1px dashed lightblue;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 8px;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  table.tg td:empty, table.tg th:empty {
+    background-color: rgb(237, 250, 255);
+  }
+  table.tg tbody tr:hover {
+    background-color: rgb(237, 250, 255);
+    cursor: default;
+  }
+
+  /* Right: artifacts */
+  .col-artifacts {
+    padding: 16px 0 16px 12px;
+    /* border-left: 1px dashed lightblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+  }
+  .col-artifacts img {
+    width: 100%;
+    height: auto;
     height: auto;
     display: block;
-}
-    
-    table.tg {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    table.tg th, table.tg td {
-        border: 1px dashed lightblue;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        overflow: hidden;
-        padding: 10px 5px;
-        word-break: normal;
-        font-weight: normal;
-        text-align: left;
-        vertical-align: top;
-    }
-    table.tg th:not(.col-recording), table.tg td:not(.col-recording) {
-        width: max-content;
-        white-space: nowrap;
-    }
-    table.tg td:empty, table.tg th:empty {
-        background-color: rgb(237, 250, 255);
+  }
+
+  .contact {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+
+  img.zoomable {
+    cursor: zoom-in;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox.open {
+    display: flex;
+  }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  }
+
+  /* mobile-recording images hidden on desktop */
+  .mobile-recording {
+    display: none;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 12px;
     }
 
-    .recording-header-text {
-        display: inline-block;
-        min-width: 300px;
+    .header-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 0;
+      padding: 16px 0 12px;
     }
-    .col-recording {
-        position: relative;
-        overflow: hidden;
-        min-height: 300px;
+    .header-col {
+      padding: 0 8px 0 0;
     }
-    .hover-preview {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        z-index: 1;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-        background: #fff;
-    }
-    .hover-preview.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-    .hover-preview img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+    .header-col:nth-child(even) {
+      padding-right: 0;
     }
 
-    .mobile-recording {
-        display: none;
+    .main-row {
+      display: flex;
+      flex-direction: column;
     }
 
-    @media (max-width: 768px) {
-        h3{
-            margin-top: 20px;
-
-        }
-        .row{
-            flex-direction: column;
-            width: 100%;
-            max-width: 100%;
-        }
-        .col{
-            margin: 0;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        table.tg, table.tg thead, table.tg tbody, table.tg tr, table.tg th, table.tg td {
-            display: block;
-        }
-        table.tg thead tr {
-            display: none;
-        }
-        table.tg tbody tr {
-            display: flex;
-            flex-direction: column;
-            border: 1px dashed lightblue;
-            margin-bottom: 1rem;
-            padding: 0;
-            border-radius: 4px;
-        }
-        table.tg tbody tr td {
-            border: none;
-            border-bottom: 1px dashed lightblue;
-            padding: 10px;
-        }
-        table.tg tbody tr td:last-child {
-            border-bottom: none;
-        }
-        table.tg .col-recording {
-            order: -1;
-            padding: 0;
-            overflow: visible;
-            display: flex;
-            flex-direction: column;
-        }
-        table.tg .col-recording .recording-label {
-            order: -1;
-            padding: 10px;
-        }
-        table.tg .col-recording .hover-preview {
-            display: none !important;
-        }
-        table.tg .col-recording {
-            min-height: 0;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        table.tg .col-recording .recording-label {
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        table.tg .mobile-recording,
-        table.tg .mobile-recording-main {
-            display: block !important;
-            width: 100% !important;
-            min-width: 100%;
-            max-width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background: #f0f0f0;
-        }
-        table.tg .mobile-recording img,
-        table.tg .mobile-recording-main img {
-            width: 100% !important;
-            height: 100% !important;
-            min-width: 100%;
-            min-height: 100%;
-            max-width: none;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-        table.tg .row-first-cell {
-            display: flex;
-            flex-direction: column;
-        }
-        table.tg .row-first-cell .mobile-recording {
-            order: -1;
-            margin: 0 0 10px 0;
-            width: 100%;
-        }
-        table.tg tbody tr {
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        table.tg tbody tr td {
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
+    /* Mobile column order: video → table → artifacts */
+    .col-video {
+      order: 1;
+      padding: 16px 0;
+      border-right: none;
+      border-bottom: 1px dashed lightblue;
     }
+    .col-table {
+      order: 2;
+      padding: 16px 0;
+    }
+    .col-artifacts {
+      order: 3;
+      padding: 16px 0;
+      border-left: none;
+      border-top: 1px dashed lightblue;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .col-artifacts img {
+      width: calc(50% - 4px);
+    }
+
+    .col-table {
+      overflow-x: auto;
+    }
+  }
 </style>
 <script>
+// Match artifacts column height to table column height
+function syncArtifactsHeight() {
+  const colTable = document.querySelector('.col-table');
+  const colArtifacts = document.querySelector('.col-artifacts');
+  if (colTable && colArtifacts) {
+    colArtifacts.style.maxHeight = colTable.offsetHeight + 'px';
+  }
+}
+window.addEventListener('load', syncArtifactsHeight);
+window.addEventListener('resize', syncArtifactsHeight);
+
+// YouTube IFrame API
+// TODO: replace YOUTUBE_VIDEO_ID with the actual video ID once uploaded
+var YT_VIDEO_ID = 'l1_00XJoTdc';
+var ytPlayer;
+
+window.onYouTubeIframeAPIReady = function() {
+  ytPlayer = new YT.Player('yt-player', {
+    videoId: YT_VIDEO_ID,
+    width: '100%',
+    height: '200',
+    playerVars: { rel: 0, modestbranding: 1 },
+  });
+};
+
+// Load the YouTube IFrame API script
 (function() {
-    const preview = document.getElementById('hover-preview');
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
+})();
 
-    document.querySelectorAll('tr[data-hover-image]').forEach(function(row) {
-        const imgSrc = row.getAttribute('data-hover-image');
-        const img = document.createElement('img');
-        img.src = imgSrc;
-        img.alt = '';
+// Timestamp seek via YouTube player
+document.querySelectorAll('a.timestamp-link').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var seconds = parseInt(link.getAttribute('data-seconds'), 10);
+    if (ytPlayer && ytPlayer.seekTo) {
+      ytPlayer.seekTo(seconds, true);
+      ytPlayer.playVideo();
+    }
+  });
+});
 
-        row.addEventListener('mouseenter', function(e) {
-            if (!e.target.closest('.col-recording')) {
-                preview.innerHTML = '';
-                preview.appendChild(img);
-                preview.classList.add('visible');
-            }
-        });
+// Lightbox
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
 
-        row.addEventListener('mousemove', function(e) {
-            if (e.target.closest('.col-recording')) {
-                preview.classList.remove('visible');
-            } else if (!preview.contains(img)) {
-                preview.appendChild(img);
-                preview.classList.add('visible');
-            } else {
-                preview.classList.add('visible');
-            }
-        });
-
-        row.addEventListener('mouseleave', function() {
-            preview.classList.remove('visible');
-        });
+  document.querySelectorAll('img.zoomable').forEach(function(img) {
+    img.addEventListener('click', function() {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
     });
+  });
+
+  lightbox.addEventListener('click', function() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+})();
+
+(function() {
+  if (!window.matchMedia('(hover: hover)').matches) return;
+
+  const overlay = document.getElementById('hover-overlay');
+  const overlayImg = document.getElementById('hover-overlay-img');
+
+  // Preload images
+  document.querySelectorAll('tr[data-hover-image]').forEach(function(row) {
+    const img = new Image();
+    img.src = row.getAttribute('data-hover-image');
+  });
+
+  document.querySelectorAll('tr[data-hover-image]').forEach(function(row) {
+    const imgSrc = row.getAttribute('data-hover-image');
+
+    row.addEventListener('mouseenter', function(e) {
+      if (e.target.closest('td:last-child')) return;
+      overlayImg.src = imgSrc;
+      overlay.classList.add('visible');
+    });
+
+    row.addEventListener('mousemove', function(e) {
+      if (e.target.closest('td:last-child')) {
+        overlay.classList.remove('visible');
+      } else {
+        overlayImg.src = imgSrc;
+        overlay.classList.add('visible');
+      }
+    });
+
+    row.addEventListener('mouseleave', function() {
+      overlay.classList.remove('visible');
+    });
+  });
 })();
 </script>
-</html> 
+</html>
