@@ -135,7 +135,7 @@ color: slategray;
     cursor: pointer;
     /* Reserve width for "Submitting..." so the input does not shrink/grow between states */
     box-sizing: border-box;
-    min-width: 7.5rem;
+    /* min-width: 7.5rem; */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -397,9 +397,25 @@ color: slategray;
     .header-row {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
       gap: 10px;
+      row-gap: 12px;
       padding: 10px 14px;
       font-size: 0.7rem;
+    }
+    .header-row > .header-col:first-child {
+      flex: 0 0 auto;
+    }
+    .header-row > .header-col.header-col-middle {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .header-row > .header-col:last-child {
+      flex: 1 1 100%;
+      min-width: 0;
+      padding-top: 64x;
+      border-top: 1px dashed lightblue;
     }
     .header-col {
       padding: 0;
@@ -429,9 +445,8 @@ color: slategray;
     /* Mobile column order: video → table → artifacts */
     .col-video {
       order: 1;
-      padding: 16px 0;
+      padding: 8px 0;
       border-right: none;
-      border-bottom: 1px dashed lightblue;
       width: 100%;
     }
     .col-table {
@@ -440,9 +455,8 @@ color: slategray;
     }
     .col-artifacts {
       order: 3;
-      padding: 16px 0;
+      padding: 8px 0;
       border-left: none;
-      border-top: 1px dashed lightblue;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 2px;
@@ -782,7 +796,17 @@ function syncWaitlistWidth() {
   var text = document.getElementById('gathering-text');
   var form = document.getElementById('waitlist-form');
   if (!text || !form) return;
-  form.style.width = text.getBoundingClientRect().width + 'px';
+  /* Full-width row on small screens (see mobile .waitlist-form) */
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    form.style.width = '';
+    return;
+  }
+  var btn = form.querySelector('.waitlist-submit');
+  var tw = text.getBoundingClientRect().width;
+  var bw = btn ? btn.getBoundingClientRect().width : 0;
+  var gapPx = parseFloat(window.getComputedStyle(form).gap) || 6;
+  /* Span-aligned input: form = text block + submit slot so flex input ~= gathering line width */
+  form.style.width = tw + bw + gapPx + 'px';
 }
 window.addEventListener('load', syncArtifactsHeight);
 window.addEventListener('load', syncWaitlistWidth);
