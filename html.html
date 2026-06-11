@@ -12,9 +12,10 @@
       content="August 8, 2026, 6-8pm, Red Hook"
     />
     <style>
-      p{
+      p {
         margin: 0;
       }
+
       body {
         font-family: "Courier New", monospace;
         background: white;
@@ -24,7 +25,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        padding: 22px;
+        padding: clamp(12px, 4vw, 22px);
         box-sizing: border-box;
       }
 
@@ -37,12 +38,12 @@
       }
 
       marquee pre {
-        font-size: min(12px, 2vw);
+        font-size: clamp(8px, 1.8vw, 12px);
         margin: 0;
       }
 
       marquee:first-of-type {
-        top: 1.5rem;
+        top: clamp(0.75rem, 3vw, 1.5rem);
       }
 
       marquee:first-of-type pre {
@@ -50,64 +51,102 @@
       }
 
       marquee:last-of-type {
-        bottom: 1.5rem;
+        bottom: clamp(0.75rem, 3vw, 1.5rem);
       }
 
       marquee:last-of-type pre {
         color: orange;
       }
 
+      .grass {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        pointer-events: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow: hidden;
+      }
+
+      .grass pre {
+        font-size: clamp(8px, 1.8vw, 12px);
+        margin: 0;
+        color: green;
+        line-height: 1;
+      }
+
       main {
         display: grid;
-        grid-template-columns: 200px 182px 182px;
-        gap: 22px 34px;
-        width: fit-content;
-        max-width: 100%;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(14px, 2.5vw, 22px) clamp(18px, 3.5vw, 34px);
+        width: min(632px, 100%);
         position: relative;
         z-index: 1;
       }
 
       section {
-        border: 1px solid black;
-        padding: 8px;
+        border: 1px solid greenyellow;
+        padding: clamp(8px, 2vw, 12px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size:18px;
-        line-height: normal;
+        gap: 0.75rem;
+        font-size: clamp(15px, 2.5vw, 18px);
+        line-height: 1.35;
+        min-width: 0;
+        background-color: rgba(255, 255, 255, 0.8); ;
       }
 
       section b {
         color: green;
-        font-size: 24px;
+        font-size: clamp(18px, 3.5vw, 24px);
         font-weight: normal;
-      }
-
-      section:nth-child(1),
-      section:nth-child(2),
-      section:nth-child(3) {
-        min-height: 286px;
       }
 
       section:nth-child(5) {
         grid-column: 2 / -1;
-        min-height: 139px;
       }
 
       section:nth-child(6) {
         grid-column: 1 / -1;
-        min-height: 139px;
       }
 
       a {
         color: inherit;
+        overflow-wrap: anywhere;
       }
 
-      @media (max-width: 900px) {
+      @media (max-width: 720px) {
+        body {
+          align-items: flex-start;
+          padding-top: clamp(3rem, 12vw, 4.5rem);
+          padding-bottom: clamp(3rem, 12vw, 4.5rem);
+        }
+
+        main {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          width: 100%;
+        }
+
+        section:nth-child(1) {
+          grid-column: 1 / -1;
+        }
+
+        section:nth-child(5),
+        section:nth-child(6) {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 480px) {
         main {
           grid-template-columns: 1fr;
         }
 
+        section:nth-child(1),
         section:nth-child(5),
         section:nth-child(6) {
           grid-column: auto;
@@ -117,6 +156,38 @@
   </head>
 
   <body>
+    <div class="grass" aria-hidden="true">
+      <pre>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣇⠀⣀⠀⠀⢀⣠⡶⢟⣩⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⢤⣤⣄⡀⠀⢀⡿⣿⣼⣻⢁⣴⠟⢥⣿⠟⠁⠀⠀⠀⠀⠀⠀⣄⠀⢠⣾⡏⢀⣠⣾⠆⠀⠀⠀⠀
+⠀⠀⠀⠀⠉⠻⣝⠳⣾⡇⣿⠃⣯⠞⠁⣰⡟⠁⠀⠀⠀⠀⠀⠀⢠⠀⢿⢧⣺⠉⣿⠞⣹⣏⣤⣶⡄⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢷⠀⠁⠈⠐⠏⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡾⠌⠳⠀⠈⠀⠙⠁⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⡇⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⣷⠀⠀⠀⠀⡄⠀⠀⢸⣦⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⣾⡿⠋
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⡿⠀⢹⠀⢀⣴⡾⢻⡆⠀⢸⡿⣆⠀⠀⢀⣠⢀⣴⠞⣩⡾⣁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⢦⣄⢸⡇⠀⢸⣶⢿⡿⠀⡌⠳⠀⣼⠇⣿⢠⡼⣿⣿⡟⠁⢠⣟⣥⣼⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢶⣦⣌⣷⠙⢿⡇⠀⢸⠇⣿⣠⡾⠻⡕⣴⡏⠀⣽⠏⠀⣿⠋⠀⠀⣿⡟⢩⡟⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⠙⡇⠀⠀⠀⠈⠀⠹⠏⠀⠀⠙⠟⠀⠀⠀⠀⠀⠉⠀⠀⠀⠸⠷⣾⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+      <pre>
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣇⠀⣀⠀⠀⢀⣠⡶⢟⣩⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⢤⣤⣄⡀⠀⢀⡿⣿⣼⣻⢁⣴⠟⢥⣿⠟⠁⠀⠀⠀⠀⠀⠀⣄⠀⢠⣾⡏⢀⣠⣾⠆⠀⠀⠀⠀
+⠀⠀⠀⠀⠉⠻⣝⠳⣾⡇⣿⠃⣯⠞⠁⣰⡟⠁⠀⠀⠀⠀⠀⠀⢠⠀⢿⢧⣺⠉⣿⠞⣹⣏⣤⣶⡄⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢷⠀⠁⠈⠐⠏⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡾⠌⠳⠀⠈⠀⠙⠁⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⡇⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⣷⠀⠀⠀⠀⡄⠀⠀⢸⣦⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⣾⡿⠋
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⡿⠀⢹⠀⢀⣴⡾⢻⡆⠀⢸⡿⣆⠀⠀⢀⣠⢀⣴⠞⣩⡾⣁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⢦⣄⢸⡇⠀⢸⣶⢿⡿⠀⡌⠳⠀⣼⠇⣿⢠⡼⣿⣿⡟⠁⢠⣟⣥⣼⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢶⣦⣌⣷⠙⢿⡇⠀⢸⠇⣿⣠⡾⠻⡕⣴⡏⠀⣽⠏⠀⣿⠋⠀⠀⣿⡟⢩⡟⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⠙⡇⠀⠀⠀⠈⠀⠹⠏⠀⠀⠙⠟⠀⠀⠀⠀⠀⠉⠀⠀⠀⠸⠷⣾⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+    </div>
     <marquee direction="right">
       <pre>
     ⢠⠎⠉⠙⣦⠏⠀⠀⠈⡆⢀⣀⡀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠋⠉⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
